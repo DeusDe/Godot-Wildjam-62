@@ -71,7 +71,7 @@ class Plant:
 		self.description = plantDescription
 		self.plant_name = plantName
 		self.planted_texture = texture
-		self.hframes = texture.get_width()/16
+		self.hframes = int(texture.get_width()/16)
 	
 	func newInstance():
 		pass
