@@ -16,19 +16,17 @@ TODO
 
 TODO
 
-![Game Screenshot](screenshot.jpg)
-
 ## Credits
 
 All sprites were made with:
-- [Resprite](https://resprite.fengeon.com), a sprite editor software for iOS devices.
-- [Aseprite](https://github.com/aseprite/aseprite), a sprite editor software for Mac, Linux, and Windows systems.
+- ![Resprite](https://resprite.fengeon.com), a sprite editor software for iOS devices.
+- ![Aseprite](https://github.com/aseprite/aseprite), a sprite editor software for Mac, Linux, and Windows systems.
 
 The game was made with:
-- [Godot](https://godotengine.org), an open-source and free game engine for 2D and 3D games.
+- ![Godot](https://godotengine.org), an open-source and free game engine for 2D and 3D games.
 
 The game was made for:
-- [Godot Wild Jam 62](https://godotwildjam.com/), a game jam for Godot games. The jam themes and wildcards are chosen and made by the awesome [community](https://discord.gg/godotwildjam) of the GWJ.
+- ![Godot Wild Jam 62](https://godotwildjam.com/), a game jam for Godot games. The jam themes and wildcards are chosen and made by the awesome ![community](https://discord.gg/godotwildjam) of the GWJ.
 
 ## License
 
