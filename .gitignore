@@ -1,0 +1,33 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Godot files
+.export/
+.export_templates/
+*.import/
+*.mono/
+*.pck
+*.xscn
+
+# Mono/C# files
+obj/
+bin/
+.mono/
+
+# Visual Studio cache directory
+.vs/
+
+# macOS files
+.DS_Store
+
+# Thumbnails
+_Thumb*
+
+# Logs
+*.log
+
+# Other
+*.swp
+*.bak
+*.tmp
+*.sav
