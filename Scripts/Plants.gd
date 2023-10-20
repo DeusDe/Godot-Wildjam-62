@@ -1,6 +1,6 @@
 extends Node
 
-@onready var energyPlantTexture = preload("res://Sprites/EnergyFlower.png")
+var selectedPlant = null
 
 enum resources{
 	Water,
@@ -11,13 +11,145 @@ enum resources{
 
 var plantData = {
 	"energyFlower" : {
-		"1":{
-			"hitpoints":"1",
-			"upgradeCost":create_res_dict(1,1,1,1),
-			"upgradeProduction":create_res_dict(1,1,1,1),
-			"spriteFrame":3,
-		}
-	}
+		"name":"Energy Flower",
+		"Description":"",
+		"Texture":preload("res://Sprites/EnergyFlower.png"),
+		"Icon":preload("res://Sprites/EnergyFlowerIcon.png"),
+		"isPlantable":true,
+		"isAllowed":true,
+		"level":{
+				"1":{},
+				"2":{},
+				"3":{},
+				"4":{},
+				"5":{},
+				"6":{},
+				"7":{},
+				"8":{},
+				"9":{},
+				"10":{},
+		},
+	},
+	"waterFlower" : {
+		"name":"Water Flower",
+		"Description":"",
+		"Texture":preload("res://Sprites/WaterFlower.png"),
+		"Icon":preload("res://Sprites/WaterFlowerIcon.png"),
+		"isPlantable":true,
+		"isAllowed":true,
+		"level":{
+				"1":{},
+				"2":{},
+				"3":{},
+				"4":{},
+				"5":{},
+				"6":{},
+				"7":{},
+				"8":{},
+				"9":{},
+				"10":{},
+		},
+	},
+	"shootFlower" : {
+		"name":"Shoot Flower",
+		"Description":"",
+		"Texture":preload("res://Sprites/ShootingFlower.png"),
+		"Icon":preload("res://Sprites/ShootingFlowerIcon.png"),
+		"isPlantable":true,
+		"isAllowed":true,
+		"level":{
+				"1":{},
+				"2":{},
+				"3":{},
+				"4":{},
+				"5":{},
+				"6":{},
+				"7":{},
+				"8":{},
+				"9":{},
+				"10":{},
+		},
+	},
+	"healFlower" : {
+		"name":"Heal Flower",
+		"Description":"",
+		"Texture":preload("res://Sprites/HealFlower.png"),
+		"Icon":preload("res://Sprites/HealFlowerIcon.png"),
+		"isPlantable":true,
+		"isAllowed":true,
+		"level":{
+				"1":{},
+				"2":{},
+				"3":{},
+				"4":{},
+				"5":{},
+				"6":{},
+				"7":{},
+				"8":{},
+				"9":{},
+				"10":{},
+		},
+	},
+	"blockFlower" : {
+		"name":"Block Flower",
+		"Description":"",
+		"Texture":preload("res://Sprites/WallFlower.png"),
+		"Icon":preload("res://Sprites/WallFlowerIcon.png"),
+		"isPlantable":true,
+		"isAllowed":true,
+		"level":{
+				"1":{},
+				"2":{},
+				"3":{},
+				"4":{},
+				"5":{},
+				"6":{},
+				"7":{},
+				"8":{},
+				"9":{},
+				"10":{},
+		},
+	},
+	"freezeFlower" : {
+		"name":"Freeze Flower",
+		"Description":"",
+		"Texture":preload("res://Sprites/FreezingFlower.png"),
+		"Icon":preload("res://Sprites/FreezingFlowerIcon.png"),
+		"isPlantable":true,
+		"isAllowed":true,
+		"level":{
+				"1":{},
+				"2":{},
+				"3":{},
+				"4":{},
+				"5":{},
+				"6":{},
+				"7":{},
+				"8":{},
+				"9":{},
+				"10":{},
+		},
+	},
+	"motherFlower" : {
+		"name":"Mother Flower",
+		"Description":"",
+		"Texture":null,
+		"Icon":null,
+		"isPlantable":false,
+		"isAllowed":true,
+		"level":{
+				"1":{},
+				"2":{},
+				"3":{},
+				"4":{},
+				"5":{},
+				"6":{},
+				"7":{},
+				"8":{},
+				"9":{},
+				"10":{},
+		},
+	},
 }
 
 class Plant:
@@ -30,7 +162,8 @@ class Plant:
 	var hframes : int
 	
 	func get_max_hitpoints():
-		return upgradeStruct[get_level_as_str()]["hitpoints"]
+		pass
+		#return upgradeStruct[get_level_as_str()]["hitpoints"]
 
 	func get_max_hitpoints_as_str():
 		return str(get_max_hitpoints())
@@ -50,9 +183,10 @@ class Plant:
 		return upgradeStruct.size()
 
 	func set_plant_upgrades(upgradeStruct: Dictionary):
-		self.current_level = 1
-		self.upgradeStruct = upgradeStruct
-		self.current_hitpoints = get_max_hitpoints()
+		#self.current_level = 1
+		#self.upgradeStruct = upgradeStruct
+		#self.current_hitpoints = get_max_hitpoints()
+		pass
 	
 	func get_level():
 		return current_level
@@ -66,12 +200,12 @@ class Plant:
 	func get_hitpoints_as_string():
 		return str(get_hitpoints())
 	
-	func _init(plantUpgrades: Dictionary, plantDescription : String, plantName : String,texture: Texture2D):
-		set_plant_upgrades(plantUpgrades)
-		self.description = plantDescription
-		self.plant_name = plantName
-		self.planted_texture = texture
-		self.hframes = int(texture.get_width()/16)
+	func _init(selectedPlantData : Dictionary):
+		set_plant_upgrades(selectedPlantData["level"])
+		self.description = selectedPlantData["Description"]
+		self.plant_name = selectedPlantData["name"]
+		self.planted_texture = selectedPlantData["Texture"]
+		self.hframes = int(selectedPlantData["Texture"].get_width()/16)
 	
 	func newInstance():
 		pass
@@ -90,10 +224,8 @@ class Plant:
 		return hframes
 	
 	func get_sprite_frame():
-		return upgradeStruct[get_level_as_str()]["spriteFrame"]
-	
-func newSunflower():
-	return Plant.new(plantData["energyFlower"],"This is an Energy Flower", "Energy Flower",energyPlantTexture)
+		return 0
+		#return upgradeStruct[get_level_as_str()]["spriteFrame"]
 
 func create_res_dict(water:int,seeds:int,fertilizer:int,energy:int):
 	return {
@@ -102,3 +234,11 @@ func create_res_dict(water:int,seeds:int,fertilizer:int,energy:int):
 		resources.Fertilizer:fertilizer,
 		resources.Energy:energy,
 	}
+
+func set_selected_plant(plant):
+	selectedPlant = plant
+	print(selectedPlant)
+
+func reset_selected_plant():
+	selectedPlant = null
+
