@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="Godot Wild Jam 62"
-run/main_scene="res://Scenes/Test.tscn"
+run/main_scene="res://Scenes/World.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 
 [autoload]
 
 Plants="*res://Scripts/Plants.gd"
+GameSettings="*res://Scripts/game_settings.gd"
 
 [display]
 
