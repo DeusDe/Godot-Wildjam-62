@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h56owvis0p56"
-path="res://.godot/imported/EnergyFlower.png-dbe73527abcb2425979a43152f86c904.ctex"
+uid="uid://c21s1bppk3pr3"
+path="res://.godot/imported/ShootingFlower.png-09a5c3a10beca58a58585748e662c1ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/EnergyFlower.png"
-dest_files=["res://.godot/imported/EnergyFlower.png-dbe73527abcb2425979a43152f86c904.ctex"]
+source_file="res://Sprites/ShootingFlower.png"
+dest_files=["res://.godot/imported/ShootingFlower.png-09a5c3a10beca58a58585748e662c1ac.ctex"]
 
 [params]
 
