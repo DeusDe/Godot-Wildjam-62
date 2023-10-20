@@ -1,11 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://dohnukb5xm2r3"]
+[gd_scene load_steps=4 format=3 uid="uid://dohnukb5xm2r3"]
 
 [ext_resource type="Script" path="res://Scripts/World.gd" id="1_pknp7"]
 [ext_resource type="PackedScene" uid="uid://bcwtdeod1slit" path="res://Scenes/ingame_ui.tscn" id="2_gq2d3"]
+[ext_resource type="PackedScene" uid="uid://6yrfdduqm052" path="res://Scenes/info_window.tscn" id="3_ofrk5"]
 
 [node name="Test" type="Node2D"]
 script = ExtResource("1_pknp7")
 
 [node name="Tiles" type="Node" parent="."]
 
-[node name="Ingame-UI" parent="." instance=ExtResource("2_gq2d3")]
+[node name="Ingame-UI" parent="." node_paths=PackedStringArray("info_gui") instance=ExtResource("2_gq2d3")]
+info_gui = NodePath("../InfoWindow")
+
+[node name="InfoWindow" parent="." instance=ExtResource("3_ofrk5")]
+z_index = 1
+z_as_relative = false
+offset_left = 464.0
+offset_top = 232.0
+offset_right = 664.0
+offset_bottom = 344.0

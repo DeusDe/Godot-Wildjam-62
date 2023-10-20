@@ -1,6 +1,7 @@
 extends Control
 
 var button_preset = preload("res://Scenes/ui_plant_button.tscn")
+@export var info_gui : Control
 
 func _ready():
 	#Scales the UI to the right size
@@ -14,4 +15,5 @@ func _ready():
 			var current_button = button_preset.instantiate()
 			current_button.icon = currentPlantData["Icon"]
 			current_button.set_plant(plant)
-			get_node("IconContainer").add_child(current_button)
+			current_button.set_info_window(info_gui)
+			get_node("Container/IconContainer").add_child(current_button)
