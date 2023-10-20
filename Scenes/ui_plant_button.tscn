@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvmnfgoht4k1h"]
+
+[ext_resource type="Texture2D" uid="uid://ce3hncjxljr8l" path="res://Sprites/EnergyFlowerIcon.png" id="1_pxf3t"]
+[ext_resource type="Script" path="res://Scripts/ui_plant_button.gd" id="2_nbhr5"]
+
+[node name="ui_plant_button" type="Button"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.5
+offset_top = -15.5
+offset_right = 33.5
+offset_bottom = 48.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("1_pxf3t")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_nbhr5")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
