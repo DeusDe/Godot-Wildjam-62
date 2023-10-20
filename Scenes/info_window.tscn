@@ -1,0 +1,123 @@
+[gd_scene load_steps=7 format=3 uid="uid://6yrfdduqm052"]
+
+[ext_resource type="Script" path="res://Scripts/InfoWindow.gd" id="1_l4xct"]
+[ext_resource type="Texture2D" uid="uid://ce3hncjxljr8l" path="res://Sprites/EnergyFlowerIcon.png" id="2_0a4rx"]
+[ext_resource type="LabelSettings" uid="uid://b2riacly4b5ti" path="res://Resources/Info_Label_Small_resources.tres" id="3_8kgg7"]
+[ext_resource type="LabelSettings" uid="uid://dls2tt8uoou0h" path="res://Resources/Info_Label_Small_resources_Count.tres" id="4_2ff05"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vpy5i"]
+font_size = 19
+
+[sub_resource type="LabelSettings" id="LabelSettings_pv62k"]
+font_size = 15
+
+[node name="InfoWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 328.0
+offset_top = -208.0
+offset_right = 578.0
+offset_bottom = 92.0
+script = ExtResource("1_l4xct")
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.266667, 0.266667, 0.266667, 0.627451)
+metadata/_edit_lock_ = true
+
+[node name="Preview_picture" type="TextureRect" parent="."]
+offset_left = 9.0
+offset_top = 39.0
+offset_right = 241.0
+offset_bottom = 271.0
+texture = ExtResource("2_0a4rx")
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 240.0
+offset_bottom = 300.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Headline"
+label_settings = SubResource("LabelSettings_vpy5i")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_lock_ = true
+
+[node name="UpgradeCost" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Headline" type="Label" parent="VBoxContainer/UpgradeCost"]
+layout_mode = 2
+text = "(Upgrade) Cost:"
+label_settings = SubResource("LabelSettings_pv62k")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="costLabel" type="HBoxContainer" parent="VBoxContainer/UpgradeCost"]
+layout_mode = 2
+
+[node name="Resources" type="Label" parent="VBoxContainer/UpgradeCost/costLabel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Level:
+Water:
+Fertilizer:
+Energy:
+Seeds:"
+label_settings = ExtResource("3_8kgg7")
+
+[node name="Label" type="Label" parent="VBoxContainer/UpgradeCost/costLabel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "3 -> 4
+0
+
+312"
+label_settings = ExtResource("4_2ff05")
+
+[node name="Generation" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Headline" type="Label" parent="VBoxContainer/Generation"]
+layout_mode = 2
+text = "Generation:"
+label_settings = SubResource("LabelSettings_pv62k")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="costLabel" type="HBoxContainer" parent="VBoxContainer/Generation"]
+layout_mode = 2
+
+[node name="Resources" type="Label" parent="VBoxContainer/Generation/costLabel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Water:
+Fertilizer:
+Energy:
+Seeds:"
+label_settings = ExtResource("3_8kgg7")
+
+[node name="Label" type="Label" parent="VBoxContainer/Generation/costLabel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "312
+31
+331
+312"
+label_settings = ExtResource("4_2ff05")
