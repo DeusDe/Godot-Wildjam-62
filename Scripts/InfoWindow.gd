@@ -1,13 +1,22 @@
 extends Control
 
+@onready var cost_label_amount = get_node("VBoxContainer/UpgradeCost/costLabel/Amount")
+@onready var cost_label_ressources = get_node("VBoxContainer/UpgradeCost/costLabel/Resources")
+@onready var cost_label_headline = get_node("VBoxContainer/UpgradeCost/Headline")
+
+@onready var generation_label_amount = get_node("VBoxContainer/Generation/generationLabel/Amount")
+@onready var generation_ressources = get_node("VBoxContainer/Generation/generationLabel/Resources")
+@onready var generation_headline = get_node("VBoxContainer/Generation/Headline")
+
+var cost_label_default : String = "Water:\nFertilizer:\nEnergy:\nSeeds:"
+var cost_label_upgrade : String = "Level:\n" + cost_label_default
+
 enum window_side{
 	right,
 	left,
 	left_down,
 	right_down,
 }
-
-
 
 var positionDict = {}
 
@@ -40,3 +49,27 @@ func _process(delta):
 
 func set_preview_picture(picture):
 	get_node("Preview_picture").texture = picture
+
+func set_cost_text(isUpgrade : bool, level : int, level_dict : Dictionary ):
+	var costs = level_dict[str(level)]["costs"]
+	cost_label_ressources.text = cost_label_upgrade if isUpgrade else (cost_label_default + "\n ")
+	cost_label_headline.text = "Upgrade Cost" if isUpgrade else "Planting Cost"
+	cost_label_amount.text = str(costs[Plants.resources.Water]) + "\n" + str(costs[Plants.resources.Fertilizer]) + "\n" + str(costs[Plants.resources.Energy]) + "\n" + str(costs[Plants.resources.Seeds])
+
+func set_generating_text(isUpgrade: bool, level : int, level_dict : Dictionary):
+	generation_headline.text = "Generating -> Next level" if isUpgrade else "Generating"
+	if isUpgrade:
+		if(level_dict.has(str(level+1))):
+			generation_label_amount.text = str(level_dict[str(level)]["production"][Plants.resources.Water]) + " -> " + str(level_dict[str(level+1)]["production"][Plants.resources.Water]) + "\n"
+			generation_label_amount.text += str(level_dict[str(level)]["production"][Plants.resources.Fertilizer]) + " -> " + str(level_dict[str(level+1)]["production"][Plants.resources.Fertilizer]) + "\n"
+			generation_label_amount.text += str(level_dict[str(level)]["production"][Plants.resources.Energy]) + " -> " + str(level_dict[str(level+1)]["production"][Plants.resources.Energy]) + "\n"
+			generation_label_amount.text += str(level_dict[str(level)]["production"][Plants.resources.Seeds]) + " -> " + str(level_dict[str(level+1)]["production"][Plants.resources.Seeds])
+			return
+		generation_headline.text = "Generating (MAX LEVEL)"
+
+	generation_label_amount.text = str(level_dict[str(level)]["production"][Plants.resources.Water]) + "\n"
+	generation_label_amount.text += str(level_dict[str(level)]["production"][Plants.resources.Fertilizer]) + "\n"
+	generation_label_amount.text += str(level_dict[str(level)]["production"][Plants.resources.Energy])+ "\n"
+	generation_label_amount.text += str(level_dict[str(level)]["production"][Plants.resources.Seeds])
+
+		

@@ -14,5 +14,7 @@ func _on_pressed():
 	Plants.set_selected_plant(plant_name)
 	if info_window != null:
 		info_window.set_preview_picture(Plants.plantData[plant_name]["Icon"])
-
+		info_window.set_cost_text(false,1,Plants.plantData[plant_name]["level"])
+		info_window.set_generating_text(false,1,Plants.plantData[plant_name]["level"])
+		
 

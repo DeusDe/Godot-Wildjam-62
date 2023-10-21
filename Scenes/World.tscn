@@ -4,8 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://bcwtdeod1slit" path="res://Scenes/ingame_ui.tscn" id="2_gq2d3"]
 [ext_resource type="PackedScene" uid="uid://6yrfdduqm052" path="res://Scenes/info_window.tscn" id="3_ofrk5"]
 
-[node name="Test" type="Node2D"]
+[node name="Test" type="Node2D" node_paths=PackedStringArray("info_window")]
 script = ExtResource("1_pknp7")
+info_window = NodePath("InfoWindow")
 
 [node name="Tiles" type="Node" parent="."]
 

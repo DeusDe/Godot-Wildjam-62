@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var plantSprite = get_node("Plant")
 @onready var plant : Plants.Plant = null
+var info_window = null
 var has_plant : bool = false 
 func _ready():
 	#Flipping H and V makes the tiles look more random and a bit less similar 
@@ -24,8 +25,14 @@ func _on_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if(plant == null):
-				add_plant()
-				add_sprite()
+				if(Plants.selectedPlant != null):
+					add_plant()
+					add_sprite()
+					self.modulate = Color(1,0.5,0.5,1)
+			else:
+				info_window.set_generating_text(true,plant.get_level(),plant.get_level_dict())
+				info_window.set_cost_text(true,plant.get_level(),plant.get_level_dict())
+				
 
 func add_plant():
 	if(Plants.selectedPlant != null):

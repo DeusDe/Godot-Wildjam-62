@@ -18,16 +18,46 @@ var plantData = {
 		"isPlantable":true,
 		"isAllowed":true,
 		"level":{
-				"1":{},
-				"2":{},
-				"3":{},
-				"4":{},
-				"5":{},
-				"6":{},
-				"7":{},
-				"8":{},
-				"9":{},
-				"10":{},
+				"1":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"2":{
+					"costs":create_res_dict(1,1,0,0),
+					"production":create_res_dict(0,0,0,2)
+					},
+				"3":{
+					"costs":create_res_dict(1,1,1,0),
+					"production":create_res_dict(0,0,0,3)
+					},
+				"4":{
+					"costs":create_res_dict(1,2,2,0),
+					"production":create_res_dict(0,0,0,4)
+					},
+				"5":{
+					"costs":create_res_dict(1,2,2,1),
+					"production":create_res_dict(0,0,0,5)
+					},
+				"6":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,7)
+					},
+				"7":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,9)
+					},
+				"8":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,12)
+					},
+				"9":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,15)
+					},
+				"10":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,17)
+					},
 		},
 	},
 	"waterFlower" : {
@@ -38,16 +68,46 @@ var plantData = {
 		"isPlantable":true,
 		"isAllowed":true,
 		"level":{
-				"1":{},
-				"2":{},
-				"3":{},
-				"4":{},
-				"5":{},
-				"6":{},
-				"7":{},
-				"8":{},
-				"9":{},
-				"10":{},
+				"1":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"2":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"3":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"4":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"5":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"6":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"7":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"8":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"9":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"10":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
 		},
 	},
 	"shootFlower" : {
@@ -58,16 +118,46 @@ var plantData = {
 		"isPlantable":true,
 		"isAllowed":true,
 		"level":{
-				"1":{},
-				"2":{},
-				"3":{},
-				"4":{},
-				"5":{},
-				"6":{},
-				"7":{},
-				"8":{},
-				"9":{},
-				"10":{},
+				"1":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"2":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"3":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"4":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"5":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"6":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"7":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"8":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"9":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"10":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
 		},
 	},
 	"healFlower" : {
@@ -78,16 +168,46 @@ var plantData = {
 		"isPlantable":true,
 		"isAllowed":true,
 		"level":{
-				"1":{},
-				"2":{},
-				"3":{},
-				"4":{},
-				"5":{},
-				"6":{},
-				"7":{},
-				"8":{},
-				"9":{},
-				"10":{},
+				"1":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"2":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"3":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"4":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"5":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"6":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"7":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"8":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"9":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"10":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
 		},
 	},
 	"blockFlower" : {
@@ -98,16 +218,46 @@ var plantData = {
 		"isPlantable":true,
 		"isAllowed":true,
 		"level":{
-				"1":{},
-				"2":{},
-				"3":{},
-				"4":{},
-				"5":{},
-				"6":{},
-				"7":{},
-				"8":{},
-				"9":{},
-				"10":{},
+				"1":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"2":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"3":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"4":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"5":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"6":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"7":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"8":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"9":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"10":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
 		},
 	},
 	"freezeFlower" : {
@@ -118,16 +268,46 @@ var plantData = {
 		"isPlantable":true,
 		"isAllowed":true,
 		"level":{
-				"1":{},
-				"2":{},
-				"3":{},
-				"4":{},
-				"5":{},
-				"6":{},
-				"7":{},
-				"8":{},
-				"9":{},
-				"10":{},
+				"1":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"2":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"3":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"4":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"5":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"6":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"7":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"8":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"9":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"10":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
 		},
 	},
 	"motherFlower" : {
@@ -138,35 +318,57 @@ var plantData = {
 		"isPlantable":false,
 		"isAllowed":true,
 		"level":{
-				"1":{},
-				"2":{},
-				"3":{},
-				"4":{},
-				"5":{},
-				"6":{},
-				"7":{},
-				"8":{},
-				"9":{},
-				"10":{},
+				"1":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"2":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"3":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"4":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"5":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"6":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"7":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"8":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"9":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
+				"10":{
+					"costs":create_res_dict(0,1,0,0),
+					"production":create_res_dict(0,0,0,1)
+					},
 		},
 	},
 }
 
 class Plant:
-	var current_hitpoints: int
 	var description: String
 	var plant_name: String
-	var upgradeStruct : Dictionary
 	var current_level : int
 	var planted_texture : Texture2D
 	var hframes : int
-	
-	func get_max_hitpoints():
-		pass
-		#return upgradeStruct[get_level_as_str()]["hitpoints"]
-
-	func get_max_hitpoints_as_str():
-		return str(get_max_hitpoints())
+	var data_dict : Dictionary
 
 	func get_name():
 		return plant_name
@@ -174,48 +376,22 @@ class Plant:
 	func get_description():
 		return description
 	
-	func get_next_level():
-		if(upgradeStruct.size() > current_level):
-			return upgradeStruct[str(current_level+1)]
-		return null
-	
-	func get_max_level():
-		return upgradeStruct.size()
-
-	func set_plant_upgrades(upgradeStruct: Dictionary):
-		#self.current_level = 1
-		#self.upgradeStruct = upgradeStruct
-		#self.current_hitpoints = get_max_hitpoints()
-		pass
-	
 	func get_level():
 		return current_level
 	
 	func get_level_as_str():
 		return str(current_level)
 	
-	func get_hitpoints():
-		return current_hitpoints
-	
-	func get_hitpoints_as_string():
-		return str(get_hitpoints())
-	
 	func _init(selectedPlantData : Dictionary):
-		set_plant_upgrades(selectedPlantData["level"])
+		self.data_dict = selectedPlantData
 		self.description = selectedPlantData["Description"]
 		self.plant_name = selectedPlantData["name"]
 		self.planted_texture = selectedPlantData["Texture"]
 		self.hframes = int(selectedPlantData["Texture"].get_width()/16)
+		self.current_level = 1
 	
 	func newInstance():
 		pass
-	
-	func _print_debug_info():
-		print("Level: ", get_level_as_str())
-		print("Hitpoints: ",get_hitpoints_as_string())
-		print("Name: ", get_name())
-		print("Description ", get_description())
-		print(upgradeStruct)
 	
 	func get_planted_texture():
 		return planted_texture
@@ -226,6 +402,10 @@ class Plant:
 	func get_sprite_frame():
 		return 0
 		#return upgradeStruct[get_level_as_str()]["spriteFrame"]
+	
+	func get_level_dict():
+		return data_dict["level"]
+	
 
 func create_res_dict(water:int,seeds:int,fertilizer:int,energy:int):
 	return {
@@ -237,7 +417,6 @@ func create_res_dict(water:int,seeds:int,fertilizer:int,energy:int):
 
 func set_selected_plant(plant):
 	selectedPlant = plant
-	print(selectedPlant)
 
 func reset_selected_plant():
 	selectedPlant = null

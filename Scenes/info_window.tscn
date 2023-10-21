@@ -31,6 +31,7 @@ color = Color(0.266667, 0.266667, 0.266667, 0.627451)
 metadata/_edit_lock_ = true
 
 [node name="Preview_picture" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 9.0
 offset_top = 39.0
 offset_right = 241.0
@@ -78,7 +79,7 @@ Energy:
 Seeds:"
 label_settings = ExtResource("3_8kgg7")
 
-[node name="Label" type="Label" parent="VBoxContainer/UpgradeCost/costLabel"]
+[node name="Amount" type="Label" parent="VBoxContainer/UpgradeCost/costLabel"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -99,10 +100,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="costLabel" type="HBoxContainer" parent="VBoxContainer/Generation"]
+[node name="generationLabel" type="HBoxContainer" parent="VBoxContainer/Generation"]
 layout_mode = 2
 
-[node name="Resources" type="Label" parent="VBoxContainer/Generation/costLabel"]
+[node name="Resources" type="Label" parent="VBoxContainer/Generation/generationLabel"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -112,7 +113,7 @@ Energy:
 Seeds:"
 label_settings = ExtResource("3_8kgg7")
 
-[node name="Label" type="Label" parent="VBoxContainer/Generation/costLabel"]
+[node name="Amount" type="Label" parent="VBoxContainer/Generation/generationLabel"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
