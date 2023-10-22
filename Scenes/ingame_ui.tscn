@@ -47,36 +47,36 @@ alignment = 1
 custom_minimum_size = Vector2(20, 2.08165e-12)
 layout_mode = 2
 
-[node name="Resources" type="HBoxContainer" parent="Container"]
+[node name="SeedsAndFertilizer" type="HBoxContainer" parent="Container"]
 custom_minimum_size = Vector2(200, 2.08165e-12)
 layout_mode = 2
 
-[node name="Resources" type="Label" parent="Container/Resources"]
+[node name="Resources" type="Label" parent="Container/SeedsAndFertilizer"]
 layout_mode = 2
 text = "Seeds:
 Fertilizer:"
 label_settings = SubResource("LabelSettings_pn68h")
 horizontal_alignment = 2
 
-[node name="Amount" type="Label" parent="Container/Resources"]
+[node name="Amount" type="Label" parent="Container/SeedsAndFertilizer"]
 layout_mode = 2
 text = "123 (-234)
 234 (-234)"
 label_settings = SubResource("LabelSettings_afxyo")
 horizontal_alignment = 2
 
-[node name="Resources2" type="HBoxContainer" parent="Container"]
+[node name="WaterAndEnergy" type="HBoxContainer" parent="Container"]
 custom_minimum_size = Vector2(200, 2.08165e-12)
 layout_mode = 2
 
-[node name="Resources" type="Label" parent="Container/Resources2"]
+[node name="Resources" type="Label" parent="Container/WaterAndEnergy"]
 layout_mode = 2
 text = "Water:
 Energy:"
 label_settings = SubResource("LabelSettings_pn68h")
 horizontal_alignment = 2
 
-[node name="Amount" type="Label" parent="Container/Resources2"]
+[node name="Amount" type="Label" parent="Container/WaterAndEnergy"]
 layout_mode = 2
 text = "123 (-234)
 234 (-234)"
@@ -91,20 +91,22 @@ text = "Start Round"
 custom_minimum_size = Vector2(20, 2.08165e-12)
 layout_mode = 2
 
-[node name="Resources3" type="HBoxContainer" parent="Container"]
+[node name="RoundAndScore" type="HBoxContainer" parent="Container"]
 custom_minimum_size = Vector2(120, 2.08165e-12)
 layout_mode = 2
 
-[node name="Resources" type="Label" parent="Container/Resources3"]
+[node name="Resources" type="Label" parent="Container/RoundAndScore"]
 layout_mode = 2
 text = "Round:
 Score:"
 label_settings = SubResource("LabelSettings_pn68h")
 horizontal_alignment = 2
 
-[node name="Amount" type="Label" parent="Container/Resources3"]
+[node name="Amount" type="Label" parent="Container/RoundAndScore"]
 layout_mode = 2
 text = "123
 234"
 label_settings = SubResource("LabelSettings_afxyo")
 horizontal_alignment = 2
+
+[connection signal="pressed" from="Container/Button" to="." method="_on_button_pressed"]
