@@ -370,6 +370,8 @@ class Plant:
 	var hframes : int
 	var data_dict : Dictionary
 
+	
+
 	func get_name():
 		return plant_name
 	
@@ -400,11 +402,21 @@ class Plant:
 		return hframes
 	
 	func get_sprite_frame():
-		return 0
-		#return upgradeStruct[get_level_as_str()]["spriteFrame"]
+		return get_level() - 1
 	
 	func get_level_dict():
 		return data_dict["level"]
+	
+	func get_resource_gather():
+		var resources_list = get_level_dict()[get_level_as_str()]
+		var resources_final = {}
+		for i in resources_list["costs"]:
+			resources_final[i] = resources_list["costs"][i] - resources_list["production"][i]
+		return resources_final
+	
+	func update():
+		if(get_level_dict().has(str(current_level+1))):
+			self.current_level +=1 
 	
 
 func create_res_dict(water:int,seeds:int,fertilizer:int,energy:int):
