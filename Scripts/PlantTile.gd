@@ -9,7 +9,6 @@ func _ready():
 	get_node("Dirt").flip_v = randi_range(0,1)
 	get_node("Dirt").flip_h = randi_range(0,1)
 	
-
 	
 #Loads the plant sprite from the plant object, and calculates which frame it should use.
 func add_sprite():
@@ -30,9 +29,15 @@ func _on_input_event(_viewport, event, _shape_idx):
 					add_sprite()
 					self.modulate = Color(1,0.5,0.5,1)
 			else:
-				info_window.set_generating_text(true,plant.get_level(),plant.get_level_dict())
-				info_window.set_cost_text(true,plant.get_level(),plant.get_level_dict())
-				
+				update_info_window()
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			plant.update()
+			add_sprite()
+			update_info_window()
+
+func update_info_window():
+	info_window.set_generating_text(true,plant.get_level(),plant.get_level_dict())
+	info_window.set_cost_text(true,plant.get_level(),plant.get_level_dict())
 
 func add_plant():
 	if(Plants.selectedPlant != null):
